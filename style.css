@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap%27');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp%27');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 250px auto 250px;
+  grid-template-rows: auto 100px;
+  grid-template-areas: 
+  'navigation main social'
+  'footer footer footer'  ;
+  
+}
+
+aside {
+  background-color: black;
+  padding: 6px;
+}
+
+/*========== NAVIGATION ========== */
+.navigation-aside {
+  grid-area: navigation;
+}
+.navigation-aside li a {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.navigation-aside li a.active {
+  background-color: #282828;
+  opacity: 1;
+}
+.navigation-aside .primary-nav {
+  display: flex;
+  flex-direction: column;
+}
+.navigation-aside .primary-nav a {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px; 
+  opacity: 0.4;
+  transition: .2s ease-in-out;
+}
+.navigation-aside .primary-nav a:hover {
+  opacity: 1;
+}
+.primary-nav a .material-icons {
+  font-size: 26px;
+}
+
+.navigation-aside .playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #282828;
+
+  height: 400px;
+  overflow: auto;
+}
+
+.navigation-aside .playlists a {
+  font-size: 14px;
+}
+
+/*========== MAIN ========== */
+.main-content {
+  background-color: #121212;
+  grid-area: main;
+}
+
+
+/*========== SOCIAL ========== */
+.social-aside {
+  grid-area: social;
+}
+
+
+/*========== FOOTER ========== */
+.player {
+  grid-area: footer;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+}
